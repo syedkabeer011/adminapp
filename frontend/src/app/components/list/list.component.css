@@ -1,0 +1,36 @@
+.main {
+	margin-bottom: 20px;
+	margin-top: 20px;
+    margin-left: 190px; /* Same as the width of the sidenav */
+    font-size: 16px; /* Increased text to enable scrolling */
+
+}
+
+
+.bg-1 {
+  background-color: white; /* white */
+  color: black;
+}
+
+
+/* css for listing */
+
+.table {
+
+ border-collapse: collapse;
+   border-spacing: 0px;
+   width: 100%;
+}
+th, td {
+text-align: left;
+padding: 16px;
+}
+
+tr:nth-child(even) {
+background-color: #f2f2f2
+}
+
+.btn {
+  border-radius: 18px;
+  margin: 1px 1px;
+}

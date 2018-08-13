@@ -1,0 +1,180 @@
+<h2 style="text-align: center;">Create New Product</h2>
+<!-- page content -->
+<div class="container main">
+  <form action="/">
+
+  <!-- name part -->
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name" name="name" placeholder="Name of Product">
+      </div>
+    </div>
+
+	<!-- tags part -->
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Tags</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="tags" name="tags" placeholder="Tags seperated by commas for Search efficiency">
+      </div>
+    </div>
+
+	<!-- category part -->
+    <div class="row">
+      <div class="col-25">
+        <label for="category">Category</label>
+      </div>
+      <div class="col-75">
+        <select id="category" name="category">
+          <option value="biryani">Biryani</option>
+          <option value="chicken dishes">Chicken Dishes</option>
+          <option value="kebabs">Kebabs</option>
+		      <option value="rolls">Rolls</option>
+		      <option value="beverages">Beverages</option>
+		      <option value="combos">Combos</option>
+        </select>
+      </div>
+    </div>
+
+	<!-- sizes part -->
+<div class="row">
+	   <div class="col-25">
+          <label for="sizes">Size(1)</label>
+       </div>
+    <div class="col-75">
+      <div class="input_fields_wrap">
+         <div><input type="text" name="" placeholder="Size of Product eg.(500gm/1kg or 1pc)"></div>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-25">
+       <label for="sizes">Size(2)</label>
+    </div>
+ <div class="col-75">
+   <div class="input_fields_wrap">
+      <div><input type="text" name="" placeholder="Size of Product eg.(500gm/1kg or 1pc)"></div>
+   </div>
+ </div>
+</div>
+
+<div class="row">
+  <div class="col-25">
+       <label for="sizes">Size(3)</label>
+    </div>
+ <div class="col-75">
+   <div class="input_fields_wrap">
+      <div><input type="text" name="" placeholder="Size of Product eg.(500gm/1kg or 1pc)"></div>
+   </div>
+ </div>
+</div>
+
+<div class="row">
+  <div class="col-25">
+       <label for="sizes">Size(4)</label>
+    </div>
+ <div class="col-75">
+   <div class="input_fields_wrap">
+      <div><input type="text" name="" placeholder="Size of Product eg.(500gm/1kg or 1pc)"></div>
+   </div>
+ </div>
+</div>
+
+<!-- prices part -->
+<div class="row">
+	   <div class="col-25">
+          <label for="prices">Price(1)</label>
+       </div>
+    <div class="col-75">
+      <div class="input_fields_wraps">
+         <div><input type="text" name="" placeholder="Price of Product eg.(Rs.50)"></div>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-25">
+       <label for="prices">Price(2)</label>
+    </div>
+ <div class="col-75">
+   <div class="input_fields_wraps">
+      <div><input type="text" name="" placeholder="Price of Product eg.(Rs.50)"></div>
+   </div>
+ </div>
+</div>
+
+<div class="row">
+  <div class="col-25">
+       <label for="prices">Price(3)</label>
+    </div>
+ <div class="col-75">
+   <div class="input_fields_wraps">
+      <div><input type="text" name="" placeholder="Price of Product eg.(Rs.50)"></div>
+   </div>
+ </div>
+</div>
+
+<div class="row">
+  <div class="col-25">
+       <label for="prices">Price(4)</label>
+    </div>
+ <div class="col-75">
+   <div class="input_fields_wraps">
+      <div><input type="text" name="" placeholder="Price of Product eg.(Rs.50)"></div>
+   </div>
+ </div>
+</div>
+
+<!-- image upload part -->
+<div class="row">
+    <div class="form-group">
+        <div class="col-25">
+          <label for="image">Upload Image</label>
+       </div>
+	   <div class="col-75">
+        <div class="input-group">
+            <span class="input-group-btn">
+                <span class="btn btn-default btn-file">
+                    Browse… <input type="file" id="imgInp">
+                </span>
+            </span>
+            <input type="text" class="form-control" readonly>
+        </div>
+        <img id='img-upload'/>
+		</div>
+    </div>
+</div>
+
+	<!-- description part -->
+   <div class="row">
+      <div class="col-25">
+        <label for="description">Description</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="description" placeholder="Detail Description About Product...." style="height:200px"></textarea>
+      </div>
+    </div>
+
+
+<div class="row">
+  <div class="col-25">
+	<label for="status">(Active/Deactive)</label>
+  </div>
+    <div class="col-75">
+     <label class="switch">
+         <input type="checkbox">
+         <span class="slider round"></span>
+     </label>
+	</div>
+</div>
+
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>

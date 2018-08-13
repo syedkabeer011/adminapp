@@ -1,0 +1,60 @@
+<h2 style="text-align: center;">All Products</h2>
+
+<!-- listing of products (this part will be copied to angular app, above given data is same in all pages) -->
+
+<div class="container bg-1 main">
+  <div class="row">
+       <div class="col-md-12" id="customer-orders">
+
+               <div class="box">
+
+                              <div class="table-responsive">
+                                  <table class="table table-hover">
+                                      <thead>
+                                          <tr>
+                                              <th>Product Name</th>
+                                              <th>Image</th>
+                                              <th>Price1</th>
+                                              <th>Price2</th>
+                                              <th>Price3</th>
+                                              <th>Size1</th>
+                                              <th>Size2</th>
+                                              <th>Size3</th>
+                                              <th>Category</th>
+                                              <th>Tags</th>
+                                              <th>Status</th>
+                                              <th>Description</th>
+                                              <th>Alter</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr *ngFor="let i of products">
+                                              <th>{{i.name}}</th>
+                                              <td>{{i.image}}</td>
+                                              <td>{{i.price_1}}</td>
+                                              <td>{{i.price_2}}</td>
+                                              <td>{{i.price_3}}</td>
+                                              <td>{{i.size_1}}</td>
+                                              <td>{{i.size_2}}</td>
+                                              <td>{{i.size_3}}</td>
+                                              <td>{{i.category}}</td>
+                                              <td>{{i.tags}}</td>
+                                              <td><span class="label label-info">{{i.status}}</span></td>
+                                              <td>{{i.description}}</td>
+                                              <td><button type="button" class="btn btn-primary" (click)="editProduct(i._id)">Edit</button>
+                                                <button type="button" class="btn btn-danger" (click)="deleteProduct(i._id)">Delete</button></td>
+
+                                          </tr>
+
+                                      </tbody>
+                                  </table>
+                              </div>
+                              <!-- /.table-responsive -->
+
+                </div>
+                          <!-- /.box -->
+
+
+     </div>
+    </div>
+  </div>
