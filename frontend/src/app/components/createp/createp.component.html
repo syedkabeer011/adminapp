@@ -1,7 +1,7 @@
 <h2 style="text-align: center;">Create New Product</h2>
 <!-- page content -->
 <div class="container main">
-  <form action="/">
+  <form action="/" [formGroup]="createForm" class="create-form">
 
   <!-- name part -->
     <div class="row">
@@ -9,7 +9,7 @@
         <label for="fname">Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="name" name="name" placeholder="Name of Product">
+        <input type="text"   placeholder="Name of Product" #name>
       </div>
     </div>
 
@@ -19,7 +19,7 @@
         <label for="lname">Tags</label>
       </div>
       <div class="col-75">
-        <input type="text" id="tags" name="tags" placeholder="Tags seperated by commas for Search efficiency">
+        <input type="text" placeholder="Tags seperated by commas for Search efficiency" #tags>
       </div>
     </div>
 
@@ -29,7 +29,7 @@
         <label for="category">Category</label>
       </div>
       <div class="col-75">
-        <select id="category" name="category">
+        <select #category>
           <option value="biryani">Biryani</option>
           <option value="chicken dishes">Chicken Dishes</option>
           <option value="kebabs">Kebabs</option>
@@ -47,7 +47,7 @@
        </div>
     <div class="col-75">
       <div class="input_fields_wrap">
-         <div><input type="text" name="" placeholder="Size of Product eg.(500gm/1kg or 1pc)"></div>
+         <div><input type="text" placeholder="Size of Product eg.(500gm/1kg or 1pc)" #size_1></div>
       </div>
     </div>
 </div>
@@ -58,7 +58,7 @@
     </div>
  <div class="col-75">
    <div class="input_fields_wrap">
-      <div><input type="text" name="" placeholder="Size of Product eg.(500gm/1kg or 1pc)"></div>
+      <div><input type="text"  placeholder="Size of Product eg.(500gm/1kg or 1pc)" #size_2></div>
    </div>
  </div>
 </div>
@@ -69,18 +69,7 @@
     </div>
  <div class="col-75">
    <div class="input_fields_wrap">
-      <div><input type="text" name="" placeholder="Size of Product eg.(500gm/1kg or 1pc)"></div>
-   </div>
- </div>
-</div>
-
-<div class="row">
-  <div class="col-25">
-       <label for="sizes">Size(4)</label>
-    </div>
- <div class="col-75">
-   <div class="input_fields_wrap">
-      <div><input type="text" name="" placeholder="Size of Product eg.(500gm/1kg or 1pc)"></div>
+      <div><input type="text"  placeholder="Size of Product eg.(500gm/1kg or 1pc)" #size_3></div>
    </div>
  </div>
 </div>
@@ -92,7 +81,7 @@
        </div>
     <div class="col-75">
       <div class="input_fields_wraps">
-         <div><input type="text" name="" placeholder="Price of Product eg.(Rs.50)"></div>
+         <div><input type="text" placeholder="Price of Product eg.(Rs.50)" #price_1></div>
       </div>
     </div>
 </div>
@@ -103,7 +92,7 @@
     </div>
  <div class="col-75">
    <div class="input_fields_wraps">
-      <div><input type="text" name="" placeholder="Price of Product eg.(Rs.50)"></div>
+      <div><input type="text" placeholder="Price of Product eg.(Rs.50)" #price_2></div>
    </div>
  </div>
 </div>
@@ -114,18 +103,7 @@
     </div>
  <div class="col-75">
    <div class="input_fields_wraps">
-      <div><input type="text" name="" placeholder="Price of Product eg.(Rs.50)"></div>
-   </div>
- </div>
-</div>
-
-<div class="row">
-  <div class="col-25">
-       <label for="prices">Price(4)</label>
-    </div>
- <div class="col-75">
-   <div class="input_fields_wraps">
-      <div><input type="text" name="" placeholder="Price of Product eg.(Rs.50)"></div>
+      <div><input type="text" placeholder="Price of Product eg.(Rs.50)" #price_3></div>
    </div>
  </div>
 </div>
@@ -143,7 +121,7 @@
                     Browse… <input type="file" id="imgInp">
                 </span>
             </span>
-            <input type="text" class="form-control" readonly>
+            <input type="text" class="form-control" readonly #image>
         </div>
         <img id='img-upload'/>
 		</div>
@@ -156,25 +134,28 @@
         <label for="description">Description</label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="description" placeholder="Detail Description About Product...." style="height:200px"></textarea>
+        <textarea placeholder="Detail Description About Product...." style="height:200px" #description></textarea>
       </div>
     </div>
 
-
+<!-- status -->
 <div class="row">
   <div class="col-25">
 	<label for="status">(Active/Deactive)</label>
   </div>
     <div class="col-75">
-     <label class="switch">
+
+        <div><input type="text" placeholder="Boolean (1 or 0)" #status></div>
+
+   <!--  <label class="switch">
          <input type="checkbox">
          <span class="slider round"></span>
-     </label>
+     </label> -->
 	</div>
 </div>
 
     <div class="row">
-      <input type="submit" value="Submit">
+      <input type="submit" value="Submit" (click)= "addProduct(name.value, image.value, price_1.value, price_2.value, price_3.value, size_1.value, size_2.value, size_3.value, category.value, tags.value, status.value, description.value)">
     </div>
   </form>
 </div>

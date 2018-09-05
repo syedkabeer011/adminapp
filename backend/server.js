@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 
 import Product from './models/Product';
-
+import Order from './models/Order';
 
 const app = express();
 const router = express.Router();
@@ -28,6 +28,16 @@ router.route('/products').get((req, res) => {
             res.json(products);
     });
 });
+
+router.route('/orders').get((req, res) => {
+    Order.find((err, orders) => {
+        if (err)
+            console.log(err);
+        else
+            res.json(orders);
+    });
+});
+
 
 router.route('/products/:id').get((req, res) => {
     Product.findById(req.params.id, (err, product) => {

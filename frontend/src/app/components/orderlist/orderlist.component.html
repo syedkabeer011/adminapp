@@ -1,0 +1,54 @@
+<h2 style="text-align: center;">All Orders</h2>
+
+<!-- listing of products (this part will be copied to angular app, above given data is same in all pages) -->
+
+<div class="container bg-1 main">
+  <div class="row">
+       <div class="col-md-12" id="customer-orders">
+
+               <div class="box">
+
+                              <div class="table-responsive">
+                                  <table class="table table-hover">
+                                      <thead>
+                                          <tr>
+                                              <th>Order No.</th>
+                                              <th>User</th>
+                                              <th>Name</th>
+                                              <th>Items</th>
+                                              <th>Total Items</th>
+                                              <th>Total Price</th>
+                                              <th>Mobile No.</th>
+                                              <th>Order Cancelled?</th>
+                                              <th>COD</th>
+                                              <th>Order Date</th>
+                                              <th>Delivery Address</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr *ngFor="let i of orders">
+                                              <th>{{i.order_special_id}}</th>
+                                              <td>{{i.user}}</td>
+                                              <td>{{i.name}}</td>
+                                              <td>{{i.items}}</td>
+                                              <td>{{i.total_items}}</td>
+                                              <td>{{i.total_price}}</td>
+                                              <td>{{i.mobile}}</td>
+                                              <td><span class="label label-info">{{i.order_cancelled}}</span></td>
+                                              <td>{{i.cod}}</td>
+                                              <td>{{i.order_date}}</td>
+                                              <td>{{i.delivery_address}}</td>
+                                          </tr>
+
+                                      </tbody>
+                                  </table>
+                              </div>
+                              <!-- /.table-responsive -->
+
+                </div>
+                          <!-- /.box -->
+
+
+     </div>
+    </div>
+  </div>

@@ -1,3 +1,162 @@
-<p>
-  edit works!
-</p>
+<h2 style="text-align: center;">Update/Edit Product</h2>
+<!-- page content -->
+<div class="container main">
+  <form [formGroup]="updateForm" class="edit-form">
+
+  <!-- name part -->
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name" name="name" formControlName="name" placeholder="Name of Product" #name>
+      </div>
+    </div>
+
+	<!-- tags part -->
+    <div class="row">
+      <div class="col-25">
+        <label for="tags">Tags</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="tags" name="tags" formControlName="tags" placeholder="Tags seperated by commas for Search efficiency" #tags>
+      </div>
+    </div>
+
+	<!-- category part -->
+    <div class="row">
+      <div class="col-25">
+        <label for="category">Category</label>
+      </div>
+      <div class="col-75">
+        <select id="category" name="category" formControlName="category" #category>
+          <option value="biryani">Biryani</option>
+          <option value="chicken dishes">Chicken Dishes</option>
+          <option value="kebabs">Kebabs</option>
+		      <option value="rolls">Rolls</option>
+		      <option value="beverages">Beverages</option>
+		      <option value="combos">Combos</option>
+        </select>
+      </div>
+    </div>
+
+	<!-- sizes part -->
+<div class="row">
+	   <div class="col-25">
+          <label for="sizes">Size(1)</label>
+       </div>
+    <div class="col-75">
+      <div class="input_fields_wrap">
+         <div><input type="text" id="size_1" name="size_1" formControlName="size_1" placeholder="Size of Product eg.(500gm/1kg or 1pc)" #size_1></div>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-25">
+       <label for="sizes">Size(2)</label>
+    </div>
+ <div class="col-75">
+   <div class="input_fields_wrap">
+      <div><input type="text" id="size_2" name="size_2" formControlName="size_2" placeholder="Size of Product eg.(500gm/1kg or 1pc)" #size_2></div>
+   </div>
+ </div>
+</div>
+
+<div class="row">
+  <div class="col-25">
+       <label for="sizes">Size(3)</label>
+    </div>
+ <div class="col-75">
+   <div class="input_fields_wrap">
+      <div><input type="text" id="size_3" name="size_3" formControlName="size_3" placeholder="Size of Product eg.(500gm/1kg or 1pc)" #size_3></div>
+   </div>
+ </div>
+</div>
+
+
+<!-- prices part -->
+<div class="row">
+	   <div class="col-25">
+          <label for="prices">Price(1)</label>
+       </div>
+    <div class="col-75">
+      <div class="input_fields_wraps">
+         <div><input type="text" id="price_1" name="price_1" formControlName="price_1" placeholder="Price of Product eg.(Rs.50)" #price_1></div>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-25">
+       <label for="prices">Price(2)</label>
+    </div>
+ <div class="col-75">
+   <div class="input_fields_wraps">
+      <div><input type="text" id="price_2" name="price_2" formControlName="price_2" placeholder="Price of Product eg.(Rs.50)" #price_2></div>
+   </div>
+ </div>
+</div>
+
+<div class="row">
+  <div class="col-25">
+       <label for="prices">Price(3)</label>
+    </div>
+ <div class="col-75">
+   <div class="input_fields_wraps">
+      <div><input type="text" id="price_3" name="price_3" formControlName="price_3" placeholder="Price of Product eg.(Rs.50)" #price_3></div>
+   </div>
+ </div>
+</div>
+
+<!-- image upload part -->
+<div class="row">
+    <div class="form-group">
+        <div class="col-25">
+          <label for="image">Upload Image</label>
+       </div>
+	   <div class="col-75">
+        <div class="input-group">
+            <span class="input-group-btn">
+                <span class="btn btn-default btn-file">
+                    Browse… <input type="file" id="imgInp">
+                </span>
+            </span>
+            <input type="text" class="form-control" readonly formControlName="image" #image>
+        </div>
+        <img id='img-upload'/>
+		</div>
+    </div>
+</div>
+
+	<!-- description part -->
+   <div class="row">
+      <div class="col-25">
+        <label for="description">Description</label>
+      </div>
+      <div class="col-75">
+        <textarea id="description" name="description" formControlName="description" placeholder="Detail Description About Product...." style="height:200px" #description></textarea>
+      </div>
+    </div>
+
+<!-- status -->
+<div class="row">
+  <div class="col-25">
+	<label for="status">(Active/Deactive)</label>
+  </div>
+    <div class="col-75">
+
+        <div><input type="text" id="status" name="status" formControlName="status" placeholder="Boolean (1 or 0)" #status></div>
+
+   <!--  <label class="switch">
+         <input type="checkbox">
+         <span class="slider round"></span>
+     </label> -->
+	</div>
+</div>
+
+    <div class="row">
+      <input type="submit" value="Update" (click)= "updateProduct(name.value, image.value, price_1.value, price_2.value, price_3.value, size_1.value, size_2.value, size_3.value, category.value, tags.value, status.value, description.value)">
+    </div>
+  </form>
+</div>

@@ -33,7 +33,8 @@ export class CreatepComponent implements OnInit {
     });
    }
 
-   addIssue(name, image, price_1, price_2, price_3, size_1, size_2, size_3, category, tags, status, description) {
+
+   addProduct(name, image, price_1, price_2, price_3, size_1, size_2, size_3, category, tags, status, description) {
     // tslint:disable-next-line:max-line-length
     this.productService.addProduct(name, image, price_1, price_2, price_3, size_1, size_2, size_3, category, tags, status, description).subscribe(() => {
       this.router.navigate(['/list']);

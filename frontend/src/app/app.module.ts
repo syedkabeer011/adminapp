@@ -13,10 +13,13 @@ import { ListComponent } from './components/list/list.component';
 import { CreatepComponent } from './components/createp/createp.component';
 import { EditComponent } from './components/edit/edit.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { OrderlistComponent } from './components/orderlist/orderlist.component';
 
 const routes: Routes = [
   {path: 'list', component: ListComponent},
   {path: 'createp', component: CreatepComponent},
+  {path: 'orderlist', component: OrderlistComponent},
   {path: 'edit/:id', component: EditComponent},
   {path: '', redirectTo: 'list', pathMatch: 'full'}
 ];
@@ -29,6 +32,8 @@ const routes: Routes = [
     CreatepComponent,
     EditComponent,
     SidenavComponent,
+    NavbarComponent,
+    OrderlistComponent,
   ],
   imports: [
     FormsModule,
